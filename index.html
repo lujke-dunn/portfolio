@@ -3,89 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luke Dunn - Portfolio</title>
+    <title>Luke Dunn</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="sharkies.png" />
 </head>
 <body>
-    <div id="particles-js"></div>
-    
-    <div class="content-wrapper">
-        <div class="card">
-            <div class="card-content">
-                <div class="navbar-container">
-                    <nav class="navbar">
-                        <a href="#home" class="active">Home</a>
-                        <a href="#projects">Projects</a>
-                        <a href="https://docs.google.com/document/d/1ff-xCxHTVQd17CLl46MvJ5kvIEv9KA73FwsXjYYKPYQ/edit?usp=sharing">Resume</a>
-                    </nav>
-                </div>
-                
-                <div class="profile-container">
-                    <div class="avatar">
-                        <img src="sharkies.png" alt="shark">
-                    </div>
-                    <h1>Luke Dunn</h1>
-                    <p>Computer Science student with a passion for <br> fullstack development! <a href="mailto:example@email.com" class="email-link">send me an email</a>.</p>
-                    <div class="social-icons">
-                        <a href="#" title="Twitter"><img src="x-social-media-white-icon.png" width="30" height="30"></img></a>
-                        <a href="#" title="Instagram"><img src="instagram-white-icon.webp" width="30" height="30"></img></a>
-                        <a href="https://github.com/lujke-dunn" title="GitHub"><img src="github-social-media-white-icon.png" width="30" height="30"></img></a>
-                        <a href="https://www.linkedin.com/in/luke-dunn-41b941253/" title="LinkedIn"><img src="linkedin-social-media-white-icon.png" width="30" height="30"></img></a>
-                </div>
-                
-                <div class="content-columns">
-                    <div class="project-posts">
-                        <br>
-                        <br>
-                        <h2>Recent Projects</h2>
-                        <div class="project-post">
-                            <h3>Flight Booker</h3>
-                            <p>April, 2024</p>
-                            <p>A responsive web app for flight booking and management built using React and styled with TailwindCSS</p>
-                            <a href="https://github.com/lujke-dunn/flight-booker-214" class="read-more">github repo   </a>
-                            <a href="#" class="read-more" style="padding: 15px;">  live demo</a>
-                        </div>
-                        <div class="project-post">
-                            <h3>Weather Widget</h3>
-                            <p>June, 2023</p>
-                            <p>A weather chrome extension using html and css</p>
-                            <a href="https://github.com/lujke-dunn/weather/tree/main" class="read-more">github repo   </a>
-                        </div>
+    <div class="container">
+        <div class="header">
+            <img id="profile-pic" alt="Luke Dunn" class="profile-pic">
+            <h1>Luke Dunn</h1>
+        </div>
+        <p class="subtitle">Software Developer who loves learning</p>
+        
+        <nav class="nav">
+            <a href="#projects" class="nav-link active" onclick="showPage('projects', this)">Projects</a>
+            <a href="#experience" class="nav-link" onclick="showPage('experience', this)">Experience</a>
+        </nav>
 
+        <div id="projects" class="page active">
+            <div class="content">
+                <h2>Projects</h2>
+                
+                <div class="project">
+                    <h3>Healthy Empower - Fitness & Nutrition App</h3>
+                    <div class="project-date">2024 - 2025 (Capstone Project)</div>
+                    <p>A comprehensive React Native fitness and nutrition tracking application with Node.js backend. Features include workout planning, exercise guidance, meal logging, achievement systems, currency rewards, and social leaderboards. Built with SQLite database, RESTful APIs, and real-time data synchronization.</p>
+                    <a href="https://github.com/lujke-dunn/healthy-empower" target="_blank">View on GitHub</a>
+                </div>
 
-                    </div>
-                  
+                <div class="project">
+                    <h3>APE Programming Language</h3>
+                    <div class="project-date">2024</div>
+                    <p>A custom programming language interpreter built from scratch in Go. Features include lexical analysis, recursive descent parsing, tree-walking evaluation, and support for variables, functions, arrays, hash maps, and control flow statements.</p>
+                    <a href="https://github.com/lujke-dunn/APElang" target="_blank">View on GitHub</a>
                 </div>
             </div>
         </div>
+
+        <div id="experience" class="page">
+            <div class="content">
+                <h2>Experience</h2>
+                
+                <div class="experience-item">
+                    <h3>Computer Science Degree</h3>
+                    <div class="experience-date">Recently Graduated</div>
+                    <p>Completed coursework in software engineering, algorithms, data structures, and web development.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://github.com/lujke-dunn" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/luke-dunn-41b941253/" target="_blank">LinkedIn</a>
+            <a href="mailto:lukedunn011@gmail.com">Email</a>
+        </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: ["#9171f8", "#00ffff", "#9171f8"] },
-                shape: { type: "circle" },
-                opacity: { value: 0.7, random: true },
-                size: { value: 7, random: true },
-                line_linked: { enable: false },
-                move: { enable: true, speed: 15, direction: "none", random: true, out_mode: "out" }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "repulse" },
-                    onclick: { enable: true, mode: "push" }
-                },
-                modes: {
-                    repulse: { distance: 100, duration: 0.4 },
-                    push: { particles_nb: 4 }
-                }
-            },
-            retina_detect: true
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
